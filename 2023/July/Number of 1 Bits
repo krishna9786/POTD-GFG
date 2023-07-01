@@ -1,4 +1,14 @@
-# Number of 1 Bits
+/*
+*
+* Problem Statement - https://practice.geeksforgeeks.org/problems/set-bits0143/1
+*
+*/
 
-
-
+int setBits(int N) {
+      int res = 0;
+      while(N > 0) {
+          N = N & (N-1);
+          res++;
+      }
+      return res;
+    }
